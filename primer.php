@@ -11,6 +11,7 @@
     <?php
         //Código de PHP
         echo "Hola mundo";
+        echo "PHP funcionando en LOCALHOST";
     ?>
 </body>
 </html>
