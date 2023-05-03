@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    //Código PHP
+    //CÃ³digo PHP
     echo "Hola segundo";
     ?>
 </body>
