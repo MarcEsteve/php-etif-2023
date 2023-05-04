@@ -11,6 +11,7 @@ creado ", " con multiples parámetros.";
 
 echo '<br><a href="ejercicio-print.php">ejercicio de print()</a>';
 
+//Aqui acaba el código de PHP
 ?>
 <!-- Si finalizamos el código php podriamos integrar HTML -->
 <br>
