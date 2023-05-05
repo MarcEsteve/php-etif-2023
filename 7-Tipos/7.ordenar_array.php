@@ -8,10 +8,16 @@ $meses = array(
 
 $numeros = array(1, 22, 23, 10, 9, 5, 70, 100, 20);
 
-rsort($numeros);
+//Ejercicio final*
+$semana = array('Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo');
+
 sort($meses); //Función del array que queremos ordenar
+sort($numeros);
 // rsort($meses); Inverso del array
 // rsort($numeros);
+
+//Ejercicio final*
+sort($semana);
 
 ?>
 <!DOCTYPE html>
@@ -21,18 +27,34 @@ sort($meses); //Función del array que queremos ordenar
 	<title>Meses del Año</title>
 </head>
 <body>
-	<h1>Meses del Año</h1>
+	<h2>Meses del Año</h2>
 	<ul>
-		<?php
-			foreach($numeros as $numero){
-				echo '<li>' . $numero . '</li>';
-			}
-		?>
 		<?php
 			foreach($meses as $mes){
 				echo '<li>' . $mes . '</li>';
 			}
 		?>
 	</ul>
+
+	<h2>Números orden creciente</h2>
+	<ul>
+		<?php
+			foreach($numeros as $numero){
+				echo '<li>' . $numero . '</li>';
+			}
+		?>
+	</ul>
+	<!-- Ejercicio final* -->
+	<h2>Dias de la semana ordenados alfabéticamente inversos</h2>
+	<ol>
+		<?php
+			foreach($semana as $dia){
+				echo '<li>' . $dia . '</li>';
+			}
+		?>
+	</ol>
+	<!-- EJERCICIO*
+	Creas array $semana, ordenamos en orden inverso y mostramos los dias de la semana, también en un listado ordenado
+	-->
 </body>
 </html>

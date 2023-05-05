@@ -16,15 +16,16 @@ $meses = array(
 <body>
 	<h1>Meses del Año</h1>
 	<ul>
-		<!-- <li><?php echo $meses[0]; ?></li> Podriamos colocarlos de uno en uno con un listado -->
+		<!--<li><?php echo $meses[0]; ?></li>  Podriamos colocarlos de uno en uno con un listado -->
+		
 		<?php 
-
 		# Mediante el ciclo foreach podemos recorrer un array y ejecutar determinadas instrucciones por cada elemento del array.
 		# Esta es la forma mas facil de recorrer arrays en PHP.
+		//echo $mes; //El alias $mes no existen todavía
 		foreach($meses as $mes){
 			echo '<li>' . $mes . '</li>'; // echo $meses[0]; solo repetiria el primero
 		}
-
+		//echo $mes; //No tiene sentido mostrar solo el último valor
 		?>
 	</ul>
 </body>
