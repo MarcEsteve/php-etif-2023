@@ -19,6 +19,11 @@ sort($numeros);
 //Ejercicio final*
 sort($semana);
 
+//Ejemplo con distintos tipos en el array para sort()
+$matriz = array(3, 'Martes', 'Miercoles', 5, 'Viernes', 'Sabado', 13);
+
+//echo sort($matriz); // Muestra primero en orden números y luego strings.
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
