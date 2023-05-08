@@ -25,12 +25,12 @@
     //echo $p1->nombre; //No se puede porque los atributos son privados
     $p1->setNombre("Juan");
     echo $p1->getNombre(); // Imprime "Juan"
+
     $p2 = new Profesor();
-    //echo $p2->nombre; //No se puede porque los atributos son privados
     $p2->setNombre("Pedro");
     echo $p2->getNombre(); // Imprime "Pedro"
+
     $p3 = new Profesor();
-    //echo $p3->nombre; //No se puede porque los atributos son privados
     $p3->setNombre("Manolo");
     echo $p3->getNombre(); // Imprime "Manolo"
 
