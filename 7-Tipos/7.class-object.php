@@ -35,8 +35,10 @@
     
     $profesor1 = new Profesor();//Creamos OBJETO
     //echo gettype($profesor1); //Muestra tipo "object"
-    echo 'El nombre del profesor es ' . $profesor1->nombre . ' ' . $profesor1->apellido . " con una altura de " . $profesor1->altura . 'm';
-    $profesor1->hablar("<br>Un cordial saludo");
+    echo 'El nombre del profesor es ' . $profesor1->nombre . ' ' . $profesor1->apellido . " con una altura de " . $profesor1->altura . 'm' . " que imparte la asignatura de " . $profesor1->materia . "<br>";
+    $profesor1->hablar("Un cordial saludo");
+
+    //EJERCICIO: Muestra también en el texto: "imparte Desarrollo Web"
 
     //Creamos un segundo OBJETO de la CLASS "Profesor"
     $profesor2 = new Profesor(); //Instancia
