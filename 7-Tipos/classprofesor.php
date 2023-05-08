@@ -15,6 +15,22 @@
         public function hablar($mensaje){
             echo $mensaje;
         }
+        //Getters y Setters
+        public function getNombre() {
+            return $this->nombre;
+        }
+    
+        public function setNombre($nombre) {
+            $this->nombre = $nombre;
+        }
+    
+        public function getMateria() {
+            return $this->materia;
+        }
+    
+        public function setMateria($materia) {
+            $this->materia = $materia;
+        }
     }
     
     $profesor1 = new Profesor();//Creamos OBJETO
