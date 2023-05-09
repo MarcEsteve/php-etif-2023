@@ -6,7 +6,9 @@
 class Vehiculo {
     protected $marca;
     protected $modelo;
-  
+    protected $matricula;
+    protected $precio;
+    
     public function __construct($marca, $modelo) {
       $this->marca = $marca;
       $this->modelo = $modelo;
@@ -27,22 +29,46 @@ class Vehiculo {
 
 // Definición de la subclase Coche, que hereda de laclase Vehiculo
 class Coche extends Vehiculo {
+    private $volante;
   public function acelerar() {
     echo $this->marca . " " . $this->modelo . " está acelerando...\n";
+  }
+  //Métodos setter/getter para $volante
+  public function setVolante($volante) {
+    $this->volante = $volante;
+  }
+  public function getVolante() {
+    return $this->volante;
   }
 }
 
 // Definición de la subclase Avion, que hereda de laclase Vehiculo
 class Avion extends Vehiculo {
+    private $alas;
   public function despegar() {
     echo $this->marca . " " . $this->modelo . " está despegando...\n";
+  }
+  //Métodos setter/getter para $alas
+  public function setAlas($alas) {
+    $this->alas = $alas;
+  }
+  public function getAlas() {
+    return $this->alas;
   }
 }
 
 // Definición de la subclase Barco, que hereda de laclase Vehiculo
 class Barco extends Vehiculo {
+    private $eslora;
   public function navegar() {
     echo $this->marca . " " . $this->modelo . " está navegando...\n";
+  }
+  //Métodos setter/getter para $eslora
+  public function setEslora($eslora) {
+    $this->eslora = $eslora;
+  }
+  public function getEslora() {
+    return $this->eslora;
   }
 }
 
@@ -64,9 +90,15 @@ echo "<br>";
 
 // Uso de los métodos específicos de las subclases
 $coche->acelerar();
+$coche->setVolante("izquierda");
+echo "El volante esta en la posición " . $coche->getVolante();
 echo "<br>";
 $avion->despegar();
+$avion->setAlas(4);
+echo "El avión tiene " . $avion->getAlas() . " alas";
 echo "<br>";
 $barco->navegar();
+$barco->setEslora(362);
+echo "El barco tiene " . $barco->getEslora() . "m de eslora";
   
 ?>
