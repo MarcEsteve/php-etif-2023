@@ -1,13 +1,11 @@
 <?php
 
 //HERENCIA
-class Foo
-{
-    public function printItem($string)
-    {
+class Foo {
+    public function printItem($string) {
         echo 'Foo: ' . $string . PHP_EOL;
     }
-    
+
     public function printPHP()
     {
         echo 'PHP is great.' . PHP_EOL;
@@ -76,5 +74,3 @@ echo $obj2->public;    // Funciona bien
 //echo $obj2->protected; // Error Fatal
 //echo $obj2->private;   // Undefined
 $obj2->printHello();   // Muestra Public2, Protected2, Undefined
-
-?>
