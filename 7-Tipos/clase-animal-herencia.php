@@ -3,7 +3,7 @@
 class Animal {
   protected $name; // Propiedad protegida que contendrá el nombre del animal
 
-  // Constructor de la clase Animal
+  // Constructor de la clase Animal, define la instanciación del objeto
   public function __construct($name) {
     $this->name = $name;
   }
@@ -62,5 +62,7 @@ $vaca->eat();
 $gato->maullar();
 $perro->ladrar();
 $vaca->mugir();
+
+//Ejercicio: Crea de la misma estructura, la superclase Vehiculo, y las subclases Coche, Avion y Barco. Vehiculo tendrá al menos 1 atributo y 2 metodos específicos. Después cada sbuclase Coche, Avion y Barco tendrán al menos 1 atributo y 1 método específico
 
 ?>
