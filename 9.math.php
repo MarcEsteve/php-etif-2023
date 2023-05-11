@@ -2,33 +2,37 @@
 
 // Funciones matemáticas:
 
-// echo(pi()); // 3.1415926535898
-$radio = 15;
-$perimetro = 2*pi()*$radio;
-// echo $perimetro;
+//Cálculo del perímetro de una circumferencia
+// echo(pi()) ."<br>"; // 3.1415926535898
+// $radio = 15;
+// $perimetro = 2*pi()*$radio;
+// echo $perimetro ."<br>";
 
-// echo(min(0, 150, 30, 20, -8, -200));  // -200
+// echo(min(0, 150, 30, 20, -8, -200)) . "<br>";  // -200
 // echo(max(0, 150, 30, 20, -8, -200));  // 150
 
 // echo(abs(-6.7));  // returns 6.7
+// echo "<br>";
 // echo(sqrt(64));  // returns 8
+// echo "<br>";
 // echo(round(0.60));  // returns 1
-// echo(round(0.49));  // returns 0
+// echo "<br>";
+// echo(round(0.4999999));  // returns 0
 
 # ceil() es como round() redondeo hacia arriba
-echo(ceil(0.60) . "<br>");
-echo(ceil(0.40) . "<br>");
-echo(ceil(5) . "<br>");
-echo(ceil(5.1) . "<br>");
-echo(ceil(-5.1) . "<br>");
-echo(ceil(-5.9));
+// echo(ceil(0.60) . "<br>");
+// echo(ceil(0.40) . "<br>");
+// echo(ceil(5) . "<br>");
+// echo(ceil(5.1) . "<br>");
+// echo(ceil(-5.1) . "<br>");
+// echo(ceil(-5.9));
 # floor() es como round() redondeo para abajo
-echo(floor(0.60) . "<br>");
-echo(floor(0.40) . "<br>");
-echo(floor(5) . "<br>");
-echo(floor(5.1) . "<br>");
-echo(floor(-5.1) . "<br>");
-echo(floor(-5.9));
+// echo(floor(0.60) . "<br>");
+// echo(floor(0.40) . "<br>");
+// echo(floor(5) . "<br>");
+// echo(floor(5.9) . "<br>");
+// echo(floor(-5.1) . "<br>");
+// echo(floor(-5.9));
 
 // echo(rand());
 // echo(rand(10, 100));
@@ -76,6 +80,7 @@ mt_srand()	    Semillas de Mersenne Twister, generador de número aleatorios
 octdec()	    Convierte un número octal en un número decimal
 pi()	        Devuelve el valor de PI
 pow()	        Devuelve x elevado a la potencia de y
+ejemplo potencia var_dump(pow(2, 8));
 rad2deg()	    Convierte un valor en radianes en un valor en grados
 rand()	        Genera un entero aleatorio
 round()	        Redondea un número de coma flotante
