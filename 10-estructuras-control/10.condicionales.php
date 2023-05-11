@@ -18,8 +18,8 @@
 
 /* Operadores de logicos:
 
-&& - Evalua que se cumpla una de las dos condiciones
-||, OR - Evalua que se cumpla al menos una condicion
+&& - and Evalua que se cumpla una de las dos condiciones
+||, or - Evalua que se cumpla al menos una condicion
 xor - Evalua que se cumpla una y solo una condicion
 
 */
