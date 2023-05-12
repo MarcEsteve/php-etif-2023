@@ -1,12 +1,13 @@
 <?php 
 
+//Array indexado [0],[1],...[n]
 $meses = array(
 	'Enero', 'Febrero', 'Marzo', 'Abril',
 	'Mayo', 'Junio', 'Julio', 'Agosto',
 	'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
 );
 
-
+//Array asociativo ["clave"=>"valor"]
 $marc = array('telefono' => 54743221, 'edad' => 35, 'ciudad' => 'Castelldefels');
 
 ?>
@@ -23,10 +24,9 @@ $marc = array('telefono' => 54743221, 'edad' => 35, 'ciudad' => 'Castelldefels')
 			// foreach($meses as $mes){
 			// 	echo '<li>' . $mes . '</li>';
 			// }
-
 			# El ciclo foreach también NOS PERMITE recorrer arrays asosiativos.
-			foreach($marc as $dato => $valor){
-				echo '<li>' . $dato . ' : ' . $valor . '</li>';
+			foreach($marc as $clave => $valor){
+				echo '<li>' . $clave . ' : ' . $valor . '</li>';
 			}
 
 		?>

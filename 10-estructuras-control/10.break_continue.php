@@ -16,9 +16,9 @@ $paises = array(
 	<?php 
 		#Solo muestra China
         // foreach($paises as $pais){
-		//	if ($pais == 'China') {
-		//		echo $pais . '<br />'; 
-		//  	}
+		// 	if ($pais == 'China') {
+		// 		echo $pais . '<br />'; 
+		//  	} 
         // }
 
 		#Muestra todos menos China
@@ -28,16 +28,18 @@ $paises = array(
         //     }
 		// 	echo $pais . '<br />';
         // }
+		##Ese "continue" hace un salto en el recorrido del foreach
 
 		#USO DEL BREAK
-		foreach($paises as $pais){
+		// foreach($paises as $pais){
 			
-			if ($pais == 'China') {
-				break;
-			}
-			echo $pais . '<br />';
+		// 	if ($pais == 'Tailandia') {
+		// 		break;
+		// 	}
+		// 	echo $pais . '<br />';
 			
-		}
+		// }
+		##Ese "break" finaliza foreach()
 	?>
 </body>
 </html>
