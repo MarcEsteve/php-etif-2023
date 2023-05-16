@@ -18,6 +18,10 @@ $semana = array(
 // }
 // echo $ultimo_dia;
 
+// $fruta = array("naranja", "plátano");
+// array_push($fruta, "manzana", "arándano");
+// print_r($fruta);
+
 // echo join('<br />', $semana); //Une los valores de array con un salto de linea
 
 // echo count($semana); //cuenta cuandos dias hay en el array $semana
