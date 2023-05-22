@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="get"> 
+    <form action="valida-envio.php" method="get"> 
     <!-- <form action="valida-envio.php" method="post">  PARA ENVIAR POR POST-->
         <input type="text" name="nombre" placeholder="Nombre" id="">
         <input type="email" name="email" placeholder="Email" id="">
