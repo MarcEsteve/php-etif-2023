@@ -1,7 +1,7 @@
 <?php 
 
 echo "Soy un echo";
-die(); //Deja de ejecutar el resto del código
+// die(); //Deja de ejecutar el resto del código
 
 ?>
 <!DOCTYPE html>
