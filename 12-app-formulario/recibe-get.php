@@ -9,22 +9,24 @@
 if(!$_GET) {
     header('Location: http://localhost/cursoweb/formularios/ejemplo-form-index.php'); //Carpeta y archivo para rellenar el form correcto
 }
-if ($_GET['nombre']) { //VALIDACIÓN NOMBRE
+
+//VALIDACIÓN NOMBRE
+if ($_GET['nombre']) { 
     $nombre = $_GET['nombre'];
-}
-else {
+} else {
     echo 'El usuario no ha escrito su nombre';
 }
-if ($_GET['sexo']) { //VALIDACIÓN SEXO
+//VALIDACIÓN SEXO
+if ($_GET['sexo']) { 
     $sexo = $_GET['sexo'];
-}
-else {
+} else {
     echo 'El usuario no ha escrito su sexo';
 }
-if ($_GET['fecha']) { //VALIDACIÓN FECHA
+
+//VALIDACIÓN FECHA
+if ($_GET['fecha']) { 
     $fecha = $_GET['fecha'];
-}
-else {
+} else {
     echo 'El usuario no ha escrito su fecha';
 }
 if ($_GET['terminos']) { //VALIDACIÓN TERMINOS
