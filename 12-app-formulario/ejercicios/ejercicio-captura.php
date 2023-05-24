@@ -17,11 +17,11 @@
     }
   }
   
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = htmlspecialchars($_POST["nombre"]);
-    $correo = filtrarCorreo($_POST["correo"]);
-    $telefono = htmlspecialchars($_POST["telefono"]);
-    $mensaje = htmlspecialchars($_POST["mensaje"]);
+  if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $nombre = htmlspecialchars($_GET["nombre"]);
+    $correo = filtrarCorreo($_GET["correo"]);
+    $telefono = htmlspecialchars($_GET["telefono"]);
+    $mensaje = htmlspecialchars($_GET["mensaje"]);
     
     if ($nombre && $correo && $telefono && $mensaje) {
       echo "<h2>Datos recibidos:</h2>";
@@ -34,5 +34,6 @@
     }
   }
   ?>
+  <a href="vista.php"><button>Volver al formulario</button></a>
 </body>
 </html>
