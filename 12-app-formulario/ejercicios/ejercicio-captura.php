@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Resultado del formulario</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
   <h1>Resultado del formulario</h1>
@@ -22,6 +23,21 @@
     $correo = filtrarCorreo($_GET["correo"]);
     $telefono = htmlspecialchars($_GET["telefono"]);
     $mensaje = htmlspecialchars($_GET["mensaje"]);
+    
+    if ($nombre && $correo && $telefono && $mensaje) {
+      echo "<h2>Datos recibidos:</h2>";
+      echo "<p><strong>Nombre:</strong> " . $nombre . "</p>";
+      echo "<p><strong>Correo:</strong> " . $correo . "</p>";
+      echo "<p><strong>Teléfono:</strong> " . $telefono . "</p>";
+      echo "<p><strong>Mensaje:</strong> " . $mensaje . "</p>";
+    } else {
+      echo "<p>Ha ocurrido un error al procesar el formulario. Por favor, verifica los datos ingresados.</p>";
+    }
+  } else {
+    $nombre = htmlspecialchars($_POST["nombre"]);
+    $correo = filtrarCorreo($_POST["correo"]);
+    $telefono = htmlspecialchars($_POST["telefono"]);
+    $mensaje = htmlspecialchars($_POST["mensaje"]);
     
     if ($nombre && $correo && $telefono && $mensaje) {
       echo "<h2>Datos recibidos:</h2>";

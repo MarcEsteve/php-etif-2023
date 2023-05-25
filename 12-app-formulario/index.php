@@ -86,6 +86,4 @@ if ($metodo == 'POST') {//Enviado mediante POST
 
 require '12.index.view.php';
 
-echo $nombre . " " . $correo . " ". $mensaje;
-
 ?>
