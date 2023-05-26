@@ -5,6 +5,10 @@ body {
   padding: 20px;
 }
 
+li.errores {
+  color:red;
+}
+
 h1 {
   text-align: center;
   color: #333333;
