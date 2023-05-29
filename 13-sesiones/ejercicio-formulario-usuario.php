@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Formulario de Usuario</title>
-    <link rel="stylesheet" href="estilo-sesion.css">
+    <link rel="stylesheet" href="ejercicio-sesion.css">
 </head>
 <body>
     <h1>Ingrese su nombre de usuario:</h1>
@@ -27,5 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" name="nombreUsuario" required>
         <button type="submit">Crear usuario</button>
     </form>
+    <p>Sesión cerrada</p>
 </body>
 </html>

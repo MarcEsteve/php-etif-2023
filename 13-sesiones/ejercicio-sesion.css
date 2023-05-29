@@ -26,3 +26,9 @@ form {
     color: #FF8C00;
     font-weight: bold;
 }
+
+p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}

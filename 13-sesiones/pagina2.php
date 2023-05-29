@@ -17,6 +17,9 @@ if ($_SESSION) {
 	<title>Página 2</title>
 </head>
 <body>
+	<br>
 	<a href="cerrar.php">Cerrar sesión</a>
+	<br>
+	<a href="index.php">Vovler a iniciar sesión</a>
 </body>
 </html>
