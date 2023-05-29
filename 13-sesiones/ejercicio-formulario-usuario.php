@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Ingrese su nombre de usuario:</h1>
     <form method="POST" action="">
         <input type="text" name="nombreUsuario" required>
-        <button type="submit">Crear usuario</button>
+        <button type="submit">Registrar usuario</button>
     </form>
     <p>Sesión cerrada</p>
 </body>

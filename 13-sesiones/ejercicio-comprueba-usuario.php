@@ -31,6 +31,6 @@ if (isset($_SESSION['nombreUsuario']) && isset($_POST['comprobarUsuario'])) {
     <form method="POST" action="ejercicio-cierra-sesion.php">
         <button type="submit">Cerrar sesión</button>
     </form>
-    <a href="ejercicio-formulario-usuario.php"><button>Volver</button></a>
+    <a href="ejercicio-formulario-usuario.php"><button>Registrar</button></a>
 </body>
 </html>
