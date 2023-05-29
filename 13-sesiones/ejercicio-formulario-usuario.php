@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();//Inicia sesión
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener el nombre de usuario ingresado en el formulario
@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: ejercicio-comprueba-usuario.php");
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Ingrese su nombre de usuario:</h1>
     <form method="POST" action="">
         <input type="text" name="nombreUsuario" required>
-        <button type="submit">Enviar</button>
+        <button type="submit">Crear usuario</button>
     </form>
 </body>
 </html>

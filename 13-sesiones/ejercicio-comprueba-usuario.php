@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); //Continua sesión
 
 // Verificar si el nombre de usuario existe en la sesión
 if (isset($_SESSION['nombreUsuario']) && isset($_POST['comprobarUsuario'])) {
