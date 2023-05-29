@@ -7,6 +7,8 @@ if (!isset($_SESSION['SID'])) {
     $_SESSION['SID'] = session_id();
 }
 
+//Función nueva session_id() genera un un id de la sesión para un usuario por ejemplo
+
 // Mostrar el SID
 echo "El SID de la sesión actual es: " . $_SESSION['SID'];
 
