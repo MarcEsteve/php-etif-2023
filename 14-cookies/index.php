@@ -5,7 +5,7 @@ setcookie('font-size', '30px', time() + 60 * 60 * 24 * 30, '/');
 //Valor de esa cookie=30px
 // El tiempo de expiración es en 30 dias(segundos*minutos*horas*dias). PHP traduce la fecha al formato adecuado
 // 4º Parámetro: Ruta y dominio
-// setcookie('font-size', '30px', time() - 60, '/');
+// setcookie('font-size', '30px', time() - 60, '/'); //Negativo es expirado
 // Guarda 'font-size' como clave del array asociativo en $_COOKIE['font-size'] = '30px' será el valor de esa clave ['font-size'] => '30px' valor
 
 setcookie('color', 'yellow', time() + 60 * 60 * 24 * 30, '/'); //Crea cookie de nombre color, valor yellow
