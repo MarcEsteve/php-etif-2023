@@ -32,4 +32,9 @@
     echo strtotime("+1 week 2 days 4 hours 2 seconds"), "\n";
     echo strtotime("next Thursday"), "\n";
     echo strtotime("last Monday"), "\n";
+
+    #Ejercicio
+    #Genera un reloj que marque horas minutos segundos, ejemplo:
+    // 15:45:33
+    #Pregunta por formulario al usuario un campo fecha y calcula si es pasado o futuro y dile los dias que han pasado o los que faltan por llegar. También si es "hoy".
 ?>
