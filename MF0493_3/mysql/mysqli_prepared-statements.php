@@ -15,6 +15,7 @@ if ($conexion->connect_errno){
 	$id = NULL;
 
 	// Comprobamos que hayamos pasado un nombre por URL
+	//Ejemplo URL: ?nombre=prueba&email=correo@prueba.com&edad=30
 	if(isset($_GET['nombre']) && isset($_GET['email']) && isset($_GET['edad'])){
 		$nombre = $_GET['nombre'];
 		$email = $_GET['email'];

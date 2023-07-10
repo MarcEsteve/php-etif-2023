@@ -1,10 +1,10 @@
 <?php 
 
 try {
-	$conexion = new PDO('mysql:host=localhost;dbname=prueba_datos', 'root', '');
+	$conexion = new PDO('mysql:host=localhost;dbname=prueba_consola', 'root', '');
 
 	//Prepared Statements
-	$statement = $conexion->prepare('INSERT INTO usuarios VALUES (null, "Alex")');
+	$statement = $conexion->prepare('INSERT INTO usuarios (id, nombre, email, edad) VALUES (null, "Alex", "alex@corre.com", 33 )');
 	$statement->execute();
 
 
