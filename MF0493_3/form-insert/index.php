@@ -35,13 +35,14 @@
 		}
 
 		if(!$errores){
-			$enviar_a = 'tunombre@tuempresa.com';
-			$asunto = 'Correo enviado desde miPagina.com';
+			$enviar_a = 'marc@etif.es';
+			$asunto = 'Correo enviado desde formulario';
 			$mensaje_preparado = "De: $nombre \n";
 			$mensaje_preparado .= "Correo: $correo \n";
 			$mensaje_preparado .= "Mensaje: " . $mensaje;
-
-			//mail($enviar_a, $asunto, $mensaje_preparado);
+			
+			mail($enviar_a, $asunto, $mensaje_preparado);
+			
 			$enviado = 'true';
 		}
 

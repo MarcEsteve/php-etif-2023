@@ -11,7 +11,10 @@
 	<div class="visitantes">
 
 		<p class="numero">
+			<!-- Contador por archivo externo -->
 			<!-- <?php echo $num=contar_usuarios(); ?> -->
+			
+			<!-- Contador por base de datos -->
 			<?php echo $visitas['contador']; ?>
 		</p>
 		

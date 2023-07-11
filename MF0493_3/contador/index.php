@@ -13,16 +13,15 @@ $visitas = $conexion->prepare("
 	SELECT contador FROM visitas WHERE id=1;
 ");
 
-// Ejecutamos la consulta
-$visitas->execute();
-$visitas = $visitas->fetch();
-
 //Consulta actualización contador
 $sumar = $conexion->prepare("
 	UPDATE visitas SET contador=contador+1 WHERE id=1;
 ");
-$sumar->execute();
 
+// Ejecutamos las consultas
+$sumar->execute(); //UPDATE
+$visitas->execute(); //SELECT
+$visitas = $visitas->fetch();
 
 function contar_usuarios(){
 	$archivo = 'contador.txt';
@@ -37,8 +36,6 @@ function contar_usuarios(){
 		return 1;
 	}
 }
-
-
 
 require 'index-view.php';
 
