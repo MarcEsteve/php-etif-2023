@@ -21,18 +21,18 @@ $postPorPagina = 5;
 $inicio = ($pagina > 1) ? ($pagina * $postPorPagina - $postPorPagina) : 0 ;
 
 // Preparamos la consulta SQL
-$articulos = $conexion->prepare("
-	SELECT SQL_CALC_FOUND_ROWS * FROM articulos
-	LIMIT $inicio, $postPorPagina
-");
+// $articulos = $conexion->prepare("
+// 	SELECT SQL_CALC_FOUND_ROWS * FROM articulos
+// 	LIMIT $inicio, $postPorPagina
+// ");
 
 //Si queremos mostrar el último artículo el primero, es decir, el artículo más nuevo que se vea arriba:
 
-// $articulos = $conexion->prepare("
-// 	SELECT SQL_CALC_FOUND_ROWS * FROM articulos 
-// 	ORDER BY id DESC
-// 	LIMIT $inicio, $postPorPagina
-// ");
+$articulos = $conexion->prepare("
+	SELECT SQL_CALC_FOUND_ROWS * FROM articulos 
+	ORDER BY id DESC
+	LIMIT $inicio, $postPorPagina
+");
 
 
 // Ejecutamos la consulta
