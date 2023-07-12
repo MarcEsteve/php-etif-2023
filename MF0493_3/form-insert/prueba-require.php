@@ -2,7 +2,7 @@
 
 echo "Empieza el código de la prueba'. Lorem ipsum dolor sit amet consectetur adipisicing elit.";
 
-//include 'prueba-vista.php'; 
+// include 'prueba-vista.php'; 
 //Warning, cuando el archivo "incluido" no es importante
 require 'prueba-vista.php'; 
 //Fatal error, cuando el archivo es indispensable, sino el resto de la página no deberia visualizarse
@@ -10,7 +10,7 @@ require 'prueba-vista.php';
 echo "111111Sigue el código. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus est natus eum ut magni harum vitae sunt at quisquam officia voluptate nesciunt tenetur, praesentium facilis asperiores illo dignissimos neque! Magnam.";
 
 require 'prueba-vista.php';
-//Equivalente a copiar y pegar todo el código del documento preuba-vista.php: 
+//Equivalente a copiar y pegar todo el código del documento prueba-vista.php: 
 // <!DOCTYPE html>
 // <html>
 // <body>

@@ -42,6 +42,7 @@
 			$mensaje_preparado .= "Mensaje: " . $mensaje;
 			
 			mail($enviar_a, $asunto, $mensaje_preparado);
+			echo "Enviado a: $enviar_a con Asunto: '$asunto' y Mensaje: $mensaje_preparado";
 			
 			$enviado = 'true';
 		}
