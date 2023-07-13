@@ -106,38 +106,3 @@ form input[type="submit"]:hover{
 	margin: 0 auto; /* Margen automático en los lados para centrar horizontalmente */
 }
 
-table {
-	width: 80%; /* Ajusta el ancho según tus necesidades */
-	margin: 0 auto; /* Centra la tabla horizontalmente */
-	border-collapse: collapse;
-	font-family: Arial, sans-serif;
-  }
-  
-  /* Estilo para el encabezado de la tabla */
-  thead {
-	background-color: #f2f2f2;
-  }
-  
-  thead th {
-	padding: 10px;
-	font-weight: bold;
-  }
-  
-  /* Estilo para las filas de productos */
-  tbody tr:nth-child(even) {
-	background-color: #f9f9f9;
-  }
-  
-  tbody td {
-	padding: 10px;
-  }
-  
-  /* Estilo para la primera columna (código de artículo) */
-  tbody td:first-child {
-	font-weight: bold;
-  }
-  
-  /* Estilo para la última columna (precio) */
-  tbody td:last-child {
-	text-align: right;
-  }

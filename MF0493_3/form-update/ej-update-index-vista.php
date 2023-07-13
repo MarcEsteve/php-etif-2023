@@ -1,4 +1,4 @@
-<?php require 'ej-update-consulta.php' ?>
+<?php require 'ej-update-tabla.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,24 +12,26 @@
 </head>
 <body>
 	<div class="wrap">
+        <h1>Actualizar tabla de productos</h1>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-			<p>Selecciona el registro a actualizar</p>
-			<select name="id" id="id" class="form-control">
-				<option value=""></option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
+        Selecciona un CÓDIGO del artículo a modificar: 
+			<select name="codigo" id="codigo">
+				<option valure=""></option>
+				<?php foreach ($resultadosTabla as $articulo): ?>
+					<option>
+						<?php echo $articulo['CÓDIGOARTÍCULO']; ?>
+					</option>
+			<?php endforeach; ?>
 			</select>
-			<p>Escribe el nombre que se actualizará en ese registro</p>
-			<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre:" value="<?php if(!$enviado && isset($nombre)) echo $nombre ?>">
+        Selecciona el CAMPO a modificar: 
+			<select name="campo" id="campo">
+				<option valure=""></option>
+				<option value='SECCIÓN'>SECCIÓN</option>
+				<option value='NOMBREARTÍCULO'>NOMBREARTÍCULO</option>
+				<option value='PRECIO'>PRECIO</option>
+			</select>
+			<p>Escribe el cambio que se actualizará en ese registro</p>
+			<input type="text" class="form-control" id="canvi" name="canvi" value="<?php if(!$enviado && isset($canvi)) echo $canvi ?>">
 
 			<?php if (!empty($errores)): ?>
 				<div class="alert error">
@@ -51,41 +53,14 @@
             <th>NOMBREARTÍCULO</th>
             <th>PRECIO</th>
         </tr>
-        <tr>
-            <td>AR01</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-            <td>Germany</td>
-        </tr>
-        <?php foreach ($resultadosConsulta as $resultadoConsulta): ?>
+        <?php foreach ($resultadosTabla as $tabla): ?>
 					<tr>
-						<?php echo $resultadoConsulta['CÓDIGOCLIENTE']; ?>
+                        <td><?php echo $tabla['CÓDIGOARTÍCULO']; ?></td>
+                        <td><?php echo $tabla['SECCIÓN']; ?></td>
+                        <td><?php echo $tabla['NOMBREARTÍCULO']; ?></td>
+                        <td><?php echo $tabla['PRECIO']; ?></td>
                     </tr>
 		<?php endforeach; ?>
-        <tr>
-            <td>AR02</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>AR03</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>AR04</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>Germany</td>
-        </tr>
-        <tr>
-            <td>AR06</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-            <td>Germany</td>
-        </tr>
     </table>
 </body>
 </html>
