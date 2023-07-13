@@ -1,3 +1,5 @@
+<?php require 'ej-select-option-consulta.php'; ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,30 +15,29 @@
 </head>
 <body>
 	<div class="wrap">
-		<h1>Búsqueda de registros</h1>
+		<h1>Búsqueda de CLIENTES</h1>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-			Selecciona el registro a buscar: <select name="id" id="id">
-				<option value=""></option>
-				<?php foreach ($ids as $id): ?>
-					<option value="<?php echo $id['id']; ?>"><?php echo $id['id']; ?></option>
+			Selecciona un código cliente para buscar: 
+			<select name="codigo" id="codigo">
+				<option valure=""></option>
+				<?php foreach ($resultadosConsulta as $resultadoConsulta): ?>
+					<option>
+						<?php echo $resultadoConsulta['CÓDIGOCLIENTE']; ?>
+					</option>
 				<?php endforeach; ?>
 			</select>
 			<br>
-			<!-- Ejemplo para muchos registros poner intervalo -->
-			<input type="number" id="numeros" name="numeros"
-       		min="1" max="100">*(opcional)
-
 			<?php if (!empty($errores)): ?>
 				<div class="alert error">
 					<?php echo $errores; ?>
 				</div>
 			<?php elseif($enviado): ?>
 				<div class="alert success">
-					<p>Buscando registros...</p>
+					<p>Buscando cliente correctamente <?php echo $codigo; ?></p>
 				</div>
 			<?php endif ?>
 
-			<input type="submit" name="submit" class="btn btn-primary" value="Buscar registro">
+			<input type="submit" name="submit" class="btn btn-primary" value="Buscar cliente">
 	
 		</form>
 	</div>
