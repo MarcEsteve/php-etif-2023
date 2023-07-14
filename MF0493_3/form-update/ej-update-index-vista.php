@@ -52,6 +52,7 @@
             <th>SECCIÓN</th>
             <th>NOMBREARTÍCULO</th>
             <th>PRECIO</th>
+            <th>FECHA</th>
         </tr>
         <?php foreach ($resultadosTabla as $tabla): ?>
 					<tr>
@@ -59,6 +60,7 @@
                         <td><?php echo $tabla['SECCIÓN']; ?></td>
                         <td><?php echo $tabla['NOMBREARTÍCULO']; ?></td>
                         <td><?php echo $tabla['PRECIO']; ?></td>
+                        <td><?php echo $tabla['FECHA']; ?></td>
                     </tr>
 		<?php endforeach; ?>
     </table>
