@@ -1,19 +1,11 @@
 <?php 
 
-	$errores = '';
+	$mensaje = '';
 	$enviado = '';
 
 	if (isset($_POST['submit'])) {
 		$codigo = $_POST['codigo'];
-
-		if (empty($codigo)) {
-			$errores .= 'Por favor selecciona una codigo <br />';
-		}
-
-		if(!$errores){
-			$enviado = 'true';
-		}
-
+        $enviado = 'true';
 	}
 
 	require 'ej-delete-index-view.php';
@@ -31,6 +23,7 @@
 			$statement->execute(
 				array(':codigo'=> $codigo)
 			);
+            
 	}
 
 ?>

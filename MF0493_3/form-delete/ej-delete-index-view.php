@@ -7,63 +7,44 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tabla de clientes</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="estil-delete.css">
+	<script src="script.js"></script>
 </head>
 <body>
-	<div class="wrap">
-	<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-        Selecciona un CÓDIGO del artículo a modificar: 
-			<select name="codigo" id="codigo">
-				<?php foreach ($resultSet as $cliente): ?>
-					<option value="<?php echo $cliente['CÓDIGOCLIENTE']; ?>">
-						<?php echo $cliente['CÓDIGOCLIENTE']; ?>
-					</option>
-				<?php endforeach; ?>
-			</select>
-
-			<?php if (!empty($errores)): ?>
-				<div class="alert error">
-					<?php echo $errores; ?>
-				</div>
-			<?php elseif($enviado): ?>
-				<div class="alert success">
-					<p>Eliminado Correctamente</p>
-				</div>
-			<?php endif ?>
-
-			<input type="submit" name="submit" class="btn btn-primary" value="Eliminar registro">
-		</form>
-	</div>
 	<h1>CLIENTES</h1>
+	
+	<?php if ($enviado): ?>
+				<div class="alert success">
+					<p>Eliminado correctamente el registro: <?php echo $_POST['codigo'] ?></p>
+					Actualiza para ver los cambios:
+				<button id="reload-btn" onclick="reloadPage()">
+    				<i class="fas fa-sync-alt"></i>
+  				</button>
+				</div>
+				
+	<?php endif ?>
+	
 	<table>
         <tr>
-			<th class="delete">DELETE</th>
+			<th></th>
             <th>CÓDIGOCLIENTE</th>
             <th>EMPRESA</th>
             <th>DIRECCIÓN</th>
-            <th>PRUEBA</th>
         </tr>
         <?php foreach ($resultSet as $cliente): ?>
 					<tr>
-						<td><input type="submit" name="submit" class="delete-boton" value="X"></td>
+						<td><form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+						<?php $_POST['codigo']=$cliente['CÓDIGOCLIENTE']; ?>
+						<input class="oculta" name="codigo" value="<?php  echo $cliente['CÓDIGOCLIENTE']; ?>"></input>
+						<input class="delete-boton" type="submit" name="submit" value="X" onclick="confirmarEliminar()">
+						</form></td>
                         <td><?php echo $cliente['CÓDIGOCLIENTE']; ?></td>
                         <td><?php echo $cliente['EMPRESA']; ?></td>
                         <td><?php echo $cliente['DIRECCIÓN']; ?></td>
-                        <td><?php echo $cliente['POBLACIÓN']; ?></td>
-                        <td><?php echo $cliente['TELÉFONO']; ?></td>
-						<td><form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-						<select name="codigo" id="codigo">
-							
-								<option value="<?php echo $cliente['CÓDIGOCLIENTE']; ?>">
-									<?php echo $cliente['CÓDIGOCLIENTE']; ?>
-								</option>
-						</select>
-
-			<input type="submit" name="submit" class="btn btn-primary" value="Eliminar registro">
-		</form></td>
                     </tr>
 		<?php endforeach; ?>
     </table>
