@@ -48,7 +48,7 @@
 	</div>
     <table>
         <tr>
-            <th>CÓDIGOCLIENTE</th>
+            <th>CÓDIGOARTÍCULO</th>
             <th>SECCIÓN</th>
             <th>NOMBREARTÍCULO</th>
             <th>PRECIO</th>
